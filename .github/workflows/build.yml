@@ -13,7 +13,7 @@ jobs:
 
     - name: Run the build script
       run: |
-        php ./site/scripts/build.php
+        php ../site/scripts/build.php
         
     - name: Commit files
       run: |
