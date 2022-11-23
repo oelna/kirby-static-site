@@ -13,8 +13,8 @@ $site = $kirby->site();
 
 // todo: fix for domains other than user.github.io, eg. custom CNAME
 $dir = '/';
-if(!empty($argv[0])) {
-	$dir = $argv[0];
+if(!empty($argv[1])) {
+	$dir = $argv[1];
 }
 
 /*
