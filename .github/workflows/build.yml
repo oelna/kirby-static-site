@@ -16,9 +16,10 @@ jobs:
     - name: Set Repo Data
       run: |
         echo "REPO_NAME=$(basename ${{ github.repository }})" >> $GITHUB_ENV
+        echo "REPO_NAME2=${GITHUB_REPOSITORY#*/}" >> $GITHUB_ENV
     - name: Get Repo Data
       run: |
-        echo "${{ env.REPO_NAME }}"
+        echo "${{ env.REPO_NAME2 }}"
 
     - name: Run the build script
       run: |
