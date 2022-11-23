@@ -9,4 +9,14 @@
  */
 return [
     'debug' => true,
+
+    'd4l' => [
+        'static_site_generator' => [
+            'endpoint' => 'build-static',
+            'output_folder' => './static',
+            'preserve' => [],
+            'base_url' => '/',
+            'skip_media' => false
+        ]
+    ]
 ];
