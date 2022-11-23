@@ -20,4 +20,4 @@ file_put_contents(WD. '/log/' . 'log-'.time().'.txt', '1');
 */
 
 $staticSiteGenerator = new D4L\StaticSiteGenerator($kirby, null, null);
-$fileList = $staticSiteGenerator->generate(WD . '/static', '/');
+$fileList = $staticSiteGenerator->generate(WD . '/docs', '/');
