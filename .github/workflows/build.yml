@@ -23,7 +23,7 @@ jobs:
 
     - name: Run the build script
       run: |
-        php ./build.php ${{ env.REPO_NAME }}
+        php ./build/index.php ${{ env.REPO_NAME }}
         
     - name: Commit files
       run: |
