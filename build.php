@@ -1,12 +1,23 @@
 <?php
 
-define('DS', DIRECTORY_SEPARATOR);
-require('.' . DS . 'kirby' . DS . 'bootstrap.php');
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
+define('WD', '.');
+
+require(WD . '/kirby/bootstrap.php');
+require(WD . '/site/plugins/static-site-generator/index.php');
 
 $kirby = kirby();
 $site = $kirby->site();
 
-var_dump($kirby);
+/*
+if(!is_dir(WD. '/log/')) {
+	mkdir(WD. '/log/');
+}
 
-// $staticSiteGenerator = new D4L\StaticSiteGenerator($kirby, $pathsToCopy = null, $pages = null);
-// $fileList = $staticSiteGenerator->generate($outputFolder = './static', $baseUrl = '/', $preserve = []);
+file_put_contents(WD. '/log/' . 'log-'.time().'.txt', '1');
+*/
+
+$staticSiteGenerator = new D4L\StaticSiteGenerator($kirby, null, null);
+$fileList = $staticSiteGenerator->generate(WD . '/static', '/');
