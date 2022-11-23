@@ -1,4 +1,4 @@
-name: Update Repo
+name: Build the static version
 
 on:
   push:
