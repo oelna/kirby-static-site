@@ -3,7 +3,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
-define('WD', '.');
+define('WD', '..');
 
 require(WD . '/kirby/bootstrap.php');
 require(WD . '/site/plugins/static-site-generator/index.php');
