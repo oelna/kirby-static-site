@@ -9,3 +9,15 @@ If you'd like to use this, I guess you only need the `.github/workflows/build.ym
 Whenever you push changes to the repo, the static site gets rebuilt.
 
 Demo: https://oelna.github.io/kirby-static-site (Original Kirby StarterKit content)
+
+## Todo
+
+- Handle custom domains via CNAME
+- Maybe only watch changes to certain dirs (https://stackoverflow.com/a/63822945/3625228)
+  ```yml
+  on:
+  push:
+    paths:
+      - content/**
+      - assets/**
+  ```
