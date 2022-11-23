@@ -1,0 +1,29 @@
+name: Update Repo
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Run the build script
+      run: |
+        php ./site/snippets/build.php
+        
+    - name: Commit files
+      run: |
+        git config --local user.name ${{ github.actor }}
+        git config --local user.email "${{ github.actor }}@users.noreply.github.com"
+        git add .
+        git commit -m "generated static version"
+        
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        force: true
