@@ -22,7 +22,7 @@ jobs:
 
     - name: Run the build script
       run: |
-        php ./build.php $(basename ${{ github.repository }})
+        php ./build.php ${{ env.REPO_NAME }}
         
     - name: Commit files
       run: |
