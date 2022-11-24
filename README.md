@@ -21,3 +21,9 @@ Demo: https://oelna.github.io/kirby-static-site (Original Kirby StarterKit conte
       - content/**
       - assets/**
   ```
+
+## Sponsoring
+
+I left the original funding info for the Kirby repo intact, but in case you find this useful, I have a [GitHub sponsoring page](https://github.com/sponsors/oelna) and greatly appreciate any $ you can throw my way :)
+
+And obviously, you still have to buy a Kirby license if you use this in production.
